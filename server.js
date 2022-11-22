@@ -12,7 +12,7 @@ const sequelize = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({});
 
 //  Set up Session
 const sess = {
@@ -29,7 +29,7 @@ const sess = {
 app.use(session(sess));
 
 // Route middleware 
-app.use(routes);
+// app.use(routes);
 
 // Set handlebars as template engine to use
 app.engine('handlebars', hbs.engine);
