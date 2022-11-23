@@ -14,9 +14,17 @@ const loginFormHandler = async (event) => {
       username: username, 
       password: password
     }),
-    header: {'Content-Type': 'application/json'}
+    headers: {'Content-Type': 'application/json'}
   });
   console.log(response);
+
+  if (response.ok) {
+    // change below endpoint to '/dashboard' once dashboard finished.
+    document.location.replace('/')
+  } else {
+    const message = await response.json()
+    alert(message);
+  }
 };
 
-document.querySelector('form').addEventListener('submit', loginFormHandler)
+document.querySelector('form').addEventListener('submit', loginFormHandler);

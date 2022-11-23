@@ -29,7 +29,7 @@ const sess = {
 app.use(session(sess));
 
 // Route middleware 
-// app.use(routes);
+app.use(routes);
 
 // Set handlebars as template engine to use
 app.engine('handlebars', hbs.engine);
