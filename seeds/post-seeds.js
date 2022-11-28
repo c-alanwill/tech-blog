@@ -1,1 +1,0 @@
-// not sure about this.  Use mini project porjectData as a reference for post, but post has title and content instead of name and description.  ID, datecreated and user_id should be automatic.
