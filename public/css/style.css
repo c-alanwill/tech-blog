@@ -1,3 +1,18 @@
 body {
   background-color: white;
 }
+
+#createBtn {
+  margin-top: 15px;
+  margin-left: 12px;
+  margin-bottom: 14px;
+  width: 120px;
+}
+
+.btn-post {
+  width: 82px;
+}
+
+#post-title {
+  height: 50px;
+}

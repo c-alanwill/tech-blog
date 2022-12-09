@@ -11,7 +11,7 @@ Given a CMS-style blog site, when a user visits the site they are presented with
 
 The user credentials are saved when the user logs into the site and if they later revisit the site and choose to login. 
 
-On the homepage, when the user clicks on an existing blog post they are presented with the post title, contents, post creator's username and date the post is created.  The user has the option to leave a comment for the post.  If logged in, when the user clicks on the submit button for the comment that coment is saved and the post is updated to display the comment, the comment creator's username and the date the comment is added.
+On the homepage, when the user clicks on an existing blog post they are presented with the post title, contents, post creator's username and date the post is created.  The user has the option to leave a comment for the post.  If logged in, when the user clicks on the submit button for the comment that comment is saved and the post is updated to display the comment, the comment creator's username and the date the comment is added.
 
 When the user clicks on the dashboard option, they are presented with any blog posts they have personally created and the option to add a new blog post.  WHen the user click on the button to add the new blog post they are prompted to enter a title and content for that blog post.  When the user clicks on the button to "create" the new blog post the title and contents of the post are saved and the user is taken back to an updated dashboard with their new blog post. 
 
