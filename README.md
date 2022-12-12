@@ -47,6 +47,8 @@ The following image shows the application's login page:
 
 ![Signup](./Assets/signup.png)
 
+![Homepage](./Assets/homepage.png)
+
 
 ## Credits
 
