@@ -26,7 +26,7 @@ try {
     // declare session variables
     req.session.userId = userData.id;
     req.session.username = userData.username;
-    req.session.loggedIn = true;
+    req.session.logged_in = true;
  
   // Send response to client
   res.status(200).json('You are logged in.');

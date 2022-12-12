@@ -25,10 +25,6 @@ router.get('/signup', async (req, res) => {
 }
 });
 
-
-
-
-
 // Get all posts
 router.get('/', async (req, res) => {
 	// try {
@@ -41,7 +37,7 @@ router.get('/', async (req, res) => {
 		console.log(posts);
 
 		// Respond with template to render and data received.
-		res.render('homepage', { posts: posts, loggedIn: req.session.loggedIn });
+		res.render('homepage', { posts: posts, loggedIn: req.session.logged_in });
 	// } catch (error) {
 	// 		res.status(500).json(error);
 	// }
@@ -49,7 +45,15 @@ router.get('/', async (req, res) => {
 
 // Get individual post
 router.get('/post/:id', async (req, res) => {
-  res.send(`Show single posts view with id ${req.params.id}`) 
+	var id=req.params.id
+	const dbPostData = await Post.findByPk(id, {
+		include: [User],
+	});
+	var post = dbPostData.get({plain: true})
+	console.log(post)
+
+  res.render('edit-post', { post, loggedIn:
+		req.session.logged_in}); 
  });
 
 module.exports = router
