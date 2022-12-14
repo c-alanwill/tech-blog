@@ -24,7 +24,7 @@ try {
   // Create session and send reponse back
   req.session.save(() => {
     // declare session variables
-    req.session.userId = userData.id;
+    req.session.user_id = userData.id;
     req.session.username = userData.username;
     req.session.logged_in = true;
  

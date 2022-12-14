@@ -16,11 +16,12 @@ router.post('/', withAuth, async (req, res) => {
 });
 
 router.delete('/:id', withAuth, async (req, res) => {
-  try {
+  // try {
+    console.log(req.session.user_id, req.params.id)
     const postData = await Post.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
+        // user_id: req.session.user_id,
       },
     });
 
@@ -30,9 +31,31 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 
     res.status(200).json(postData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // }
+});
+
+router.put('/:id', withAuth, async (req, res) => {
+  // try {
+    console.log(req.session.user_id, req.params.id)
+    console.log(req.body)
+    const postData = await Post.update(req.body, {
+      where: {
+        id: req.params.id,
+        // user_id: req.session.user_id,
+      },
+    });
+
+    if (!postData) {
+      res.status(404).json({ message: 'Failed to update Post' });
+      return;
+    }
+
+    res.status(200).json(postData);
+  // } catch (err) {
+  //   res.status(500).json(err);
+  // }
 });
 
 module.exports = router;
