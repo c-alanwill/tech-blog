@@ -19,7 +19,6 @@ const loginFormHandler = async (event) => {
   console.log(response);
 
   if (response.ok) {
-    // change below endpoint to '/dashboard' once dashboard finished.
     document.location.replace('/')
   } else {
     const message = await response.json()

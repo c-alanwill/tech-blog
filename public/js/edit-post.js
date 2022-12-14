@@ -31,7 +31,6 @@ const updateHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-// views/edit-post.handlebars
     if (response.ok) {
       document.location.replace('/');
     } else {

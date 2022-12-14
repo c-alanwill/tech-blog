@@ -40,7 +40,3 @@ const delButtonHandler = async (event) => {
 document
   .querySelector('.new-post')
   .addEventListener('submit', newFormHandler);
-
-// document
-  // .querySelector('.post-list')
-  // .addEventListener('click', delButtonHandler);
