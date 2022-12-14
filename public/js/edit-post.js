@@ -1,5 +1,3 @@
-// const { json } = require("sequelize");
-
 const delButtonHandler = async (event) => {
   event.preventDefault()
 

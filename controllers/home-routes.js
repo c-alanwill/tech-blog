@@ -27,7 +27,6 @@ router.get('/signup', async (req, res) => {
 
 // Get all posts
 router.get('/', async (req, res) => {
-	// try {
 		// Get all posts from db
 		const dbPostData = await Post.findAll({
 			include: [User],
@@ -38,9 +37,6 @@ router.get('/', async (req, res) => {
 
 		// Respond with template to render and data received.
 		res.render('homepage', { posts: posts, loggedIn: req.session.logged_in });
-	// } catch (error) {
-	// 		res.status(500).json(error);
-	// }
 });
 
 // Get individual post
